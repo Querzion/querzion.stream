@@ -1,0 +1,211 @@
+.skip-link {
+    display: block;
+    padding: 1rem;
+    background-color: var(--clr-brand-grey);
+    border: 1px solid var(--clr-brand-gray);
+    border-radius: 0 1rem 1rem 0;
+    position: absolute;
+    left: -100svh;
+    top: 30rem;
+
+    transition: var(--transition-general);
+
+    &:focus {
+        left: 0;
+    }
+}
+
+.header-art-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    background-image: url('/images/background-art/mq-001.webp');
+    background-repeat: no-repeat;
+    background-position: right 35%;
+    background-size: cover;
+    opacity: 0.06; /* Adjust the opacity of the background image */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.header-art-box {
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    height: 8rem;
+    position: relative;
+    z-index: 1;
+
+    @include display-sm {
+        height: 10rem;
+        
+        @include display-md {
+            height: 14rem;
+
+            @include display-lg {
+                height: 16rem;
+
+                @include display-xl {
+                    height: 18rem;
+
+                    @include display-xxl {
+                        height: 20rem;
+
+                        @include display-xxxl {
+                            height: 22rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+    .logotype {
+        
+        .show-og {
+            position: absolute;
+            height: 125%;
+            top: 1em;
+            left: -1.5em;
+            display: none;
+            
+            @include display-sm {
+                display: block;
+                left: -2.2rem;
+
+                @include display-md {
+                    left: -2.8rem;
+                    
+                    @include display-lg {
+                        left: -3.5rem;
+        
+                        @include display-xl {
+                            left: -4rem;                  
+                            
+                            @include display-xxl {                    
+                                left: -4.5rem;
+        
+                                @include display-xxxl {
+                                    left: -5rem;               
+        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+
+    .header-art-text {
+        grid-area: 2 / 1;
+        position: relative;
+        z-index: 2;
+        top: -1rem;
+        right: -.3rem;
+
+        h1, h2, h3 {
+            font-family: 'distortion_dos_digital', sans-serif;
+            font-weight: 400;
+            position: absolute;
+        }
+        
+        h1 {
+            -webkit-text-stroke: 2px var(--clr-brand-gray);
+            color: var(--clr-brand-green);
+            font-size: 5rem;
+            top: -2rem;
+            right: .2rem;
+        }
+        h2 {
+            -webkit-text-stroke: 1.5px var(--clr-brand-gray);
+            color: var(--clr-white);
+            font-size: 2.3rem;
+            top: 1.34rem;
+            right: 1rem;
+        }
+        h3 {
+            color: var(--clr-brand-gray);
+            font-size: .86em;
+            font-weight: 200;
+            top: -1.5rem;
+            right: 1.3rem; 
+        }
+        
+        @include display-sm {
+            transform: scale(1.1);
+            top: -.5rem;
+            right: .75rem;
+            @include display-md {
+            transform: scale(1.4);
+                top: .3rem;
+                right: 7.8rem;
+                
+                @include display-lg {
+                    transform: scale(1.9);
+                    top: 1.3rem;
+                    right: 25.4rem;
+                    
+                    @include display-xl {
+                        transform: scale(2.2);
+                        top: 3rem;
+                        right: 40.8rem;
+                        
+                        @include display-xxl {
+                            transform: scale(2.5);
+                            top: 4.5rem;
+                            right: 59.58rem;
+                            
+                            @include display-xxxl {
+                                transform: scale(2.9);
+                                top: 6.5rem;
+                                right: 97.5rem;
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-nav {
+  
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .theme-toggle {
+        
+        .toggle {
+
+            p {
+                padding: 0;
+            }
+        }
+        
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    @include display-xl {
+
+        .main-menu {
+            display: block;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+    }
+}

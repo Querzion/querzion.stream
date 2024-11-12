@@ -1,0 +1,40 @@
+@mixin display-IDIOT {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin display-sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin display-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin display-lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin display-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin display-xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin display-xxxl {
+    @media (min-width: 2000px) {
+        @content;
+    }
+}
